@@ -131,6 +131,7 @@ document.getElementById('sms').addEventListener('click', function () {
         (selectedDice.includes(3) && selectedDice.includes(4) && selectedDice.includes(5) && selectedDice.includes(6))) {
         document.getElementById('result').textContent = "30 points";
         totalPoints += 30;
+        this.disabled = true
         scoreEffects('sms');
     }
 })
@@ -138,8 +139,9 @@ document.getElementById('sms').addEventListener('click', function () {
 document.getElementById('lgs').addEventListener('click', function () {
     if (selectedDice.includes(1) && selectedDice.includes(2) && selectedDice.includes(3) && selectedDice.includes(4) && selectedDice.includes(5) ||
         selectedDice.includes(2) && selectedDice.includes(3) && selectedDice.includes(4) && selectedDice.includes(5) && selectedDice.includes(6)) {
-        document.getElementById('result').textContent = "40 points";
+        document.getElementById('result').textContent = "40 points" 
         totalPoints += 40;
+        this.disabled = true;
         scoreEffects('lgs');
     }
 })
